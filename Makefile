@@ -12,9 +12,4 @@ build:
 dist:
 	make clean
 	python setup.py sdist
-	twine upload dist/*
-
-dist-test:
-	make clean
-	python setup.py sdist
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	twine upload --repository nexus dist/*
